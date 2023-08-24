@@ -1,0 +1,25 @@
+import React from 'react';
+import { IVGSCollectTextField, IVGSCollectCardNumberField, IVGSCollectCardExpirationField, IVGSCollectCardCVCField, IVGSCollectPasswordField, IVGSCollectSSNField, IVGSCollectNumberField, IVGSCollectZipCodeField, IVGSCollectTextareaField, IVGSCollectFileField, IVGSCollectDateField, VGSCollectStateParams } from './types/Form';
+import { VGSCollectKeyboardEventData, VGSCollectFocusEventData } from './types/Field';
+declare type GeneralFieldProps = {
+    className: string;
+    onFocus: (info: VGSCollectFocusEventData) => void;
+    onBlur: (info: VGSCollectFocusEventData) => void;
+    onUpdate: (state: VGSCollectStateParams) => void;
+    onDelete: () => void;
+    onKeyUp: (info: VGSCollectKeyboardEventData) => void;
+    onKeyDown: (info: VGSCollectKeyboardEventData) => void;
+    onKeyPress: (info: VGSCollectKeyboardEventData) => void;
+};
+declare const TextField: React.MemoExoticComponent<(props: Partial<IVGSCollectTextField & GeneralFieldProps>) => JSX.Element>;
+declare const CardNumberField: React.MemoExoticComponent<(props: Partial<IVGSCollectCardNumberField & GeneralFieldProps>) => JSX.Element>;
+declare const CardExpirationDateField: React.MemoExoticComponent<(props: Partial<IVGSCollectCardExpirationField & GeneralFieldProps>) => JSX.Element>;
+declare const CardSecurityCodeField: React.MemoExoticComponent<(props: Partial<IVGSCollectCardCVCField & GeneralFieldProps>) => JSX.Element>;
+declare const PasswordField: React.MemoExoticComponent<(props: Partial<IVGSCollectPasswordField & GeneralFieldProps>) => JSX.Element>;
+declare const SSNField: React.MemoExoticComponent<(props: Partial<IVGSCollectSSNField & GeneralFieldProps>) => JSX.Element>;
+declare const ZipCodeField: React.MemoExoticComponent<(props: Partial<IVGSCollectZipCodeField & GeneralFieldProps>) => JSX.Element>;
+declare const TextareaField: React.MemoExoticComponent<(props: Partial<IVGSCollectTextareaField & GeneralFieldProps>) => JSX.Element>;
+declare const NumberField: React.MemoExoticComponent<(props: Partial<IVGSCollectNumberField & GeneralFieldProps>) => JSX.Element>;
+declare const DateField: React.MemoExoticComponent<(props: Partial<IVGSCollectDateField & GeneralFieldProps>) => JSX.Element>;
+declare const FileField: React.MemoExoticComponent<(props: Partial<IVGSCollectFileField & GeneralFieldProps>) => JSX.Element>;
+export { TextField, CardNumberField, CardExpirationDateField, CardSecurityCodeField, PasswordField, SSNField, ZipCodeField, TextareaField, NumberField, FileField, DateField };
